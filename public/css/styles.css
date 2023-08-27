@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to bottom left, #E4E9FD, #A683E3);
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #A683E3;
+  text-align: center;
+}
+
+.forms {
+  max-width: 400px;
+  margin: auto;
+}
+
+.item {
+  min-height: 70px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 0;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.add {
+  height: 70px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.no-item {
+  text-align: center;
+}
+
+.box:has(p) {
+  text-align: center;
+}
+
+.box:has(.list-details) {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-details {
+  margin: 10px 0;
+  position: relative;
+}
+
+.box button {
+  border: none;
+  background: transparent;
+  margin-left: 20px;
+  font-size: 1rem;
+  line-height: 23px;
+}
+
+.box button:hover {
+  cursor: pointer;
+}
+
+.box a:focus,
+.box a:active,
+.delete-list-btn:focus,
+.delete-list-btn:active {
+  outline: none;
+}
+
+.box button div {
+  display: inline-block;
+  height: 15px;
+  width: 5px;
+  margin-right: 15px;
+  background-color: #A683E3;
+}
+
+.delete-list-btn {
+  color: #A683E3;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #A683E3;
+}
+
+input[type="checkbox"] {
+  margin: 15px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+/* form .item, form.clearForm, form.changeList {
+  text-align: center;
+  margin-left: 20px;
+} */
+
+.add-btn,
+.new-list-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #A683E3;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 80%;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #A683E3;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout-btn,
+.back-btn {
+  width: 100%;
+  height: 50px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #A683E3;
+  color: #fff;
+  transition: 0.3s;
+  box-shadow: 5px 5px 15px -8px rgba(0, 0, 0, 0.3);
+}
+
+.with-back-btn,
+.back-btn {
+  width: 48%;
+}
+
+.back-btn {
+  background-color: white;
+  color: #A683E3;
+}
+
+.back-btn i {
+  margin-right: 4px;
+}
+
+.logout-btn:hover,
+.back-btn {
+  cursor: pointer;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+/* Login Page */
+
+.features {
+  text-align: center;
+  max-width: 400px;
+  margin: 70px auto 30px;
+  background-color: #fff;
+  color: #A683E3;
+  padding: 20px 0;
+  border-radius: 20px;
+}
+
+.features h1 {
+  color: #A683E3;
+  padding: 0;
+  font-weight: 500;
+}
+
+.features h2 {
+  font-weight: 400;
+}
+
+.features p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 10px auto;
+}
+
+.features ul {
+  list-style: none;
+}
+
+.features hr {
+  width: 70%;
+  margin: 20px auto;
+  border: none;
+  border-bottom: 3px solid #A683E3;
+}
+
+/* Buttons */
+
+.auth-btns {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+}
+
+.log-in-btn {
+  font-size: 1.2rem;
+  display: block;
+  width: 100%;
+  margin: 15px auto;
+  border: none;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: #A683E3;
+}
+
+.log-in-btn:hover {
+  cursor: pointer;
+}
+
+.log-in-btn i,
+.log-in-btn span {
+  padding: 10px 0;
+}
+
+.log-in-p {
+  font-size: 1rem;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  font-weight: 400;
+  padding: 0;
+}
+
+/*List Page*/
+.item:has(p) {
+  min-height: fit-content;
+}
+
+.item p {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .list-details {
+    margin: 5px 0;
+  }
+
+  .box button {
+    font-size: 0.8rem;
+  }
+
+  .box button div {
+    height: 12px;
+    width: 4px;
+  }
+
+  .add {
+    height: 40px;
+  }
+
+  input[type="text"] {
+    font-size: 0.8rem;
+    height: 35px;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -2px 0 0 #A683E3;
+  }
+
+  .add-btn,
+  .new-list-btn {
+    height: 30px;
+    width: 30px;
+    font-size: 1rem;
+  }
+
+  .logout-btn, .back-btn, .log-in-btn {
+    height: 30px;
+    font-size: 0.7rem;
+  }
+
+  /* List page */
+  .box p {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  footer p{
+    font-size: 0.8rem;
+  }
+
+  /* Login Page */
+  .features p {
+    font-size: 0.8rem;
+  }
+
+  .features h2 {
+    font-size: 1.2rem;
+  }
+
+  .log-in-p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 30px;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .list-details {
+    margin: 3px 0;
+  }
+
+  .box button {
+    font-size: 0.6rem;
+  }
+
+  .box button div {
+    height: 10px;
+    width: 3px;
+  }
+
+  .add {
+    height: 30px;
+  }
+
+  input[type="text"] {
+    font-size: 0.6rem;
+    height: 25px;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -1px 0 0 #A683E3;
+  }
+
+  .add-btn,
+  .new-list-btn {
+    height: 20px;
+    width: 20px;
+    font-size: 0.8rem;
+  }
+
+  .logout-btn, .back-btn {
+    height: 30px;
+    font-size: 0.6rem;
+  }
+
+  /* List page */
+  .box p {
+    padding: 8px;
+    font-size: 0.6rem;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
+
+  /* Login Page */
+  .features h2 {
+    font-size: 1rem;
+  }
+
+  .log-in-p {
+    font-size: 0.7rem;
+  }
+}

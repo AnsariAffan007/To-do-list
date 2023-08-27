@@ -1,0 +1,61 @@
+<%- include('header'); -%>
+
+<body>
+
+    <div class="box" id="heading">
+        <h1><%=date%></h1>    
+    </div>
+    
+    <div class="box" id="heading">
+        <h1><%=listTitle%></h1>    
+    </div>
+
+
+    <% if(lists.length===0) { %>
+        <div class="box">
+            <p>Get Started by Creating Lists</p>
+        </div>
+    <% } else { %>
+        <div class="box">
+            <% lists.forEach(function(list) { %>
+                <div class="list-details">
+
+                    <form class="getListForm" action="/list" method="post">
+                        <input type="hidden" name="hiddenListName" value="<%=list.name%>">
+                        <button type="submit" class="listName"><div></div><%=list.name%></button>
+                    </form>
+
+                    <form action="/delete-list" method="post">
+                        <input type="hidden" name="hiddenListName" value="<%=list.name%>">
+                        <button class="delete-list-btn"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+
+                </div>
+            <% }) %>
+        </div>
+    <% } %>
+
+    <div class="forms">
+        
+        <form class="add" onsubmit="onSearch(this)">
+            <input type="text" id="customListName" placeholder="Create a new List" autocomplete="off">
+            <button class="new-list-btn" type="submit">+</button>        
+        </form>
+
+        <button onclick="location.href='/logout'" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i>  Logout</button>
+    </div>
+
+    <script>
+        function onSearch(form) {
+            form.action = form.querySelector('#customListName').value;
+        }
+        
+    </script>
+    
+    <footer>
+        <p>Copyright 2022 Mohammed Affan Ansari</p>
+    </footer>
+
+</body>
+
+</html>

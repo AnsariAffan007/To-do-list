@@ -1,0 +1,46 @@
+<%- include('header'); -%>
+
+    <body>
+
+        <div class="box" id="heading">
+            <h1><%=date%></h1>    
+        </div>
+        
+        <div class="box" id="heading">
+            <h1><%=listTitle%></h1>    
+        </div>
+
+        <div class="box">
+            <% if(list.length===0) { %>
+                <p>Nothing to do</p>
+            <% } %>
+        </div>
+
+        <div class="box">
+            <% list.forEach(function(itemDoc) { %>
+                <form action="/delete" method="post">
+                    <div class="item">
+                        <input type="checkbox" name="checkbox" value="<%=itemDoc.item%>" onchange="this.form.submit()">
+                        <p><%=itemDoc.item%></p>
+                    </div>
+                    <input type="hidden" name="listName" value="<%=listTitle%>">
+                </form>
+            <% }) %>
+        </div>
+
+        <div class="forms">
+            <form class="add" method="post" action="/add-item">
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                <button class="add-btn" type="submit" name="list" value="<%=listTitle%>">+</button>
+            </form>
+
+            <div class="buttons">
+                <button onclick="location.href='/'" class="back-btn"><i class="fa-solid fa-backward"></i>Back</button>
+    
+                <button onclick="location.href='/logout'" class="logout-btn with-back-btn"><i class="fa-solid fa-right-from-bracket"></i>
+                    Logout</button>
+            </div>
+        </div>
+    </body>
+
+</html>
